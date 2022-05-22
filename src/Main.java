@@ -118,6 +118,18 @@ public class Main {
                 && grid[0][6].charAt(0) == 'O' && grid[1][6].charAt(0) == 'O' && grid[2][6].charAt(0) == 'O')
                 ||(grid[0][4].charAt(0) == 'O' && grid[1][4].charAt(0) == 'O' && grid[2][4].charAt(0) == 'O'
                 && grid[0][6].charAt(0) == 'X' && grid[1][6].charAt(0) == 'X' && grid[2][6].charAt(0) == 'X')
+                || (grid[0][2].charAt(0) == 'X' && grid[0][4].charAt(0) == 'X' && grid[0][6].charAt(0) == 'O'
+                && grid[1][2].charAt(0) == 'O' && grid[1][4].charAt(0) == 'O' && grid[1][6].charAt(0) == 'X'
+                && grid[2][2].charAt(0) == 'X' && grid[2][4].charAt(0) == 'X' && grid[2][6].charAt(0) == 'O')
+                || (grid[0][2].charAt(0) == 'X' && grid[0][4].charAt(0) == 'O' && grid[0][6].charAt(0) == 'X'
+                && grid[1][2].charAt(0) == 'X' && grid[1][4].charAt(0) == 'O' && grid[1][6].charAt(0) == 'O'
+                && grid[2][2].charAt(0) == 'O' && grid[2][4].charAt(0) == 'X' && grid[2][6].charAt(0) == 'O')
+                || (grid[0][2].charAt(0) == 'O' && grid[0][4].charAt(0) == 'X' && grid[0][6].charAt(0) == 'O'
+                && grid[1][2].charAt(0) == 'O' && grid[1][4].charAt(0) == 'X' && grid[1][6].charAt(0) == 'X'
+                && grid[2][2].charAt(0) == 'X' && grid[2][4].charAt(0) == 'O' && grid[2][6].charAt(0) == 'X')
+                || (grid[0][2].charAt(0) == 'X' && grid[0][4].charAt(0) == 'X' && grid[0][6].charAt(0) == 'O'
+                && grid[1][2].charAt(0) == 'O' && grid[1][4].charAt(0) == 'O' && grid[1][6].charAt(0) == 'X'
+                && grid[2][2].charAt(0) == 'X' && grid[2][4].charAt(0) == 'O' && grid[2][6].charAt(0) == 'X')
         ) {
            winner = 3;
        } else if ((grid[0][2].charAt(0) == 'X' && grid[0][4].charAt(0) == 'O' && grid[0][6].charAt(0) == 'X'
@@ -143,7 +155,8 @@ public class Main {
                && grid[0][6].charAt(0) == 'X' && grid[1][6].charAt(0) == '0' && grid[2][6].charAt(0) == 'O')
                || (grid[0][2].charAt(0) == 'X' && grid[1][2].charAt(0) == 'X' && grid[2][2].charAt(0) == 'O'
                && grid[0][4].charAt(0) == 'O' && grid[1][4].charAt(0) == 'O' && grid[2][4].charAt(0) == 'X'
-               && grid[0][6].charAt(0) == 'X' && grid[1][6].charAt(0) == 'X' && grid[2][6].charAt(0) == 'O')) {
+               && grid[0][6].charAt(0) == 'X' && grid[1][6].charAt(0) == 'X' && grid[2][6].charAt(0) == 'O')
+        ){
            winner = 5;
        }
         return winner;
